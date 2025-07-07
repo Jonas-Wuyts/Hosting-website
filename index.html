@@ -20,24 +20,22 @@
       height: 100%;
       margin: 0;
       padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      overflow: hidden;
     }
 
-    /* The iframe container is now cropped to show a specific section */
     iframe {
       width: 100%;
       height: 100%;
       border: none;
-      clip-path: inset(30% 14% 13% 40%); /* Adjust values to focus on the video */
+      transform: scale(1.8); /* Adjust the zoom level */
+      transform-origin: 257.4px 302.4px; /* Focus on the video at the given position in pixels */
+      object-fit: cover; /* Ensure the content fills the iframe properly */
     }
   </style>
 </head>
 <body>
 
   <div id="iframe-container">
-    <!-- Embed the sports stream -->
     <iframe src="https://sporza.be/nl/livestream/?autoplay=true" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
 
