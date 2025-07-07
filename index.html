@@ -5,34 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Live Sports Stream</title>
   <style>
-    /* Make the iframe container take the full screen */
+    /* Remove default margin and padding to ensure full use of the screen */
     body, html {
       margin: 0;
       padding: 0;
       height: 100%;
+      width: 100%;
     }
 
+    /* Ensure the iframe container fills the entire screen */
     #iframe-container {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100vw;   /* Full viewport width */
-      height: 100vh;  /* Full viewport height */
+      width: 100%;
+      height: 100%;
       margin: 0;
       padding: 0;
-      overflow: hidden; /* Ensures the iframe doesn't overflow */
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
+    /* Full-width, full-height iframe */
     iframe {
       width: 100%;
       height: 100%;
       border: none;
     }
+
   </style>
 </head>
 <body>
-
-  <h1 style="position: absolute; color: white; z-index: 100; top: 20px; left: 20px;">Watch the Live Sports Stream</h1>
 
   <!-- Full-screen iframe container -->
   <div id="iframe-container">
