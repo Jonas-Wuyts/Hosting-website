@@ -3,33 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Auto-Scrolling Web Page</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-    }
-    iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      border: none;
-      animation: scrollPage 6000s linear infinite;
-    }
-    @keyframes scrollPage {
-      from {
-        transform: translateY(0);
-      }
-      to {
-        transform: translateY(-100%);
-      }
-    }
-  </style>
+  <title>Live Sports Stream</title>
 </head>
 <body>
-  <iframe src="https://sporza.be/nl/matches/wielrennen/tour-de-france/2025/tour-de-france-2025-rit-3-livestream-tour-bijzonder-gezapig-eerste-uur-aan-36-km-h-gemiddeld-gebrek-aan-vluchters-zorgt-voor-snipperdag~1728393842168/" frameborder="0"></iframe>
+  <h1>Watch the Live Sports Stream</h1>
+
+  <!-- Embed the Sporza livestream with autoplay if the site supports it -->
+  <iframe src="https://sporza.be/nl/livestream/?autoplay=true" width="800" height="600" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </body>
 </html>
