@@ -4,11 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Live Sports Stream</title>
+  <style>
+    /* Make the iframe container take the full screen */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    #iframe-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;   /* Full viewport width */
+      height: 100vh;  /* Full viewport height */
+      margin: 0;
+      padding: 0;
+      overflow: hidden; /* Ensures the iframe doesn't overflow */
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
 </head>
 <body>
-  <h1>Watch the Live Sports Stream</h1>
 
-  <!-- Embed the Sporza livestream with autoplay if the site supports it -->
-  <iframe src="https://sporza.be/nl/livestream/?autoplay=true" width="800" height="600" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <h1 style="position: absolute; color: white; z-index: 100; top: 20px; left: 20px;">Watch the Live Sports Stream</h1>
+
+  <!-- Full-screen iframe container -->
+  <div id="iframe-container">
+    <iframe src="https://sporza.be/nl/livestream/?autoplay=true" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
 </body>
 </html>
