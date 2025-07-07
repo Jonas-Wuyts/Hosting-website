@@ -17,45 +17,19 @@
       width: 100vw;
       height: 100vh;
       border: none;
+      animation: scrollPage 6000s linear infinite;
+    }
+    @keyframes scrollPage {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(-100%);
+      }
     }
   </style>
 </head>
 <body>
-  <iframe id="scrollIframe" src="https://www.vrt.be/vrtnws/nl/" frameborder="0"></iframe>
-
-  <script>
-    // Fixed number of pixels to scroll per second
-    const scrollSpeed = 50; // Scrolls 1px per second (you can adjust this)
-
-    // Wait 60 seconds before starting the scroll
-    setTimeout(function() {
-      const iframe = document.getElementById('scrollIframe');
-      let scrollPosition = 0;
-
-      // Function to get the total height of the iframe content
-      function getIframeHeight() {
-        return iframe.contentWindow.document.documentElement.scrollHeight;
-      }
-
-      // Function to scroll the iframe by a fixed number of pixels
-      function startScrolling() {
-        const totalHeight = getIframeHeight();
-        const duration = totalHeight / scrollSpeed; // Total time to scroll based on the height
-
-        // Set up the interval to scroll at a constant pixel rate per second
-        const interval = setInterval(function() {
-          if (scrollPosition < totalHeight) {
-            scrollPosition += scrollSpeed;
-            iframe.contentWindow.scrollTo(0, scrollPosition); // Scroll the iframe
-          } else {
-            clearInterval(interval); // Stop scrolling once we reach the bottom
-          }
-        }, 1000); // Scroll every second
-      }
-
-      // Start scrolling after 60 seconds
-      startScrolling();
-    }, 60); // 60000 milliseconds = 60 seconds
-  </script>
+  <iframe src="https://sporza.be/nl/matches/wielrennen/tour-de-france/2025/tour-de-france-2025-rit-3-livestream-tour-bijzonder-gezapig-eerste-uur-aan-36-km-h-gemiddeld-gebrek-aan-vluchters-zorgt-voor-snipperdag~1728393842168/" frameborder="0"></iframe>
 </body>
 </html>
